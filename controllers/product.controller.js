@@ -18,7 +18,7 @@ exports.product_create = function (req, res, next) {
         if (err) {
             return next(err);
         }
-        res.send('Product Created successfully')
+        res.send('Product Created Successfully')
     })
 };
 
@@ -32,12 +32,22 @@ exports.product_details = function (req, res, next) {
     })
 };
 
-////CR(Update)D
+//CR(Update)D
 exports.product_update = function (req, res, next) {
     Product.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, product) {
         if (err) {
             return next(err);
         }
-        res.send('Product udpated.');
+        res.send('Product Updated Successfully');
     });
+};
+
+//CRU(Delete)
+exports.product_delete = function (req, res, next) {
+    Product.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            return next(err);
+        }
+        res.send('Product Deleted Successfully');
+    })
 };
