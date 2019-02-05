@@ -21,6 +21,9 @@ curl -X GET --header "Accept: text/html" "http://localhost:1234/products/welcome
 ##### (Create)RUD
 curl -X POST --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: text/html" -d "name=apple&price=27" "http://localhost:1234/products/create"
 
-##### //C(Read)UD
+##### C(Read)UD
 http://localhost:1234/products/5c593ae2d264e00bcc86965e
 curl -X GET --header "Accept: text/html" "http://localhost:1234/products/5c593ae2d264e00bcc86965e"
+
+##### CR(Update)D
+curl -X PUT --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: text/html" -d "name=apple&price=75" "http://localhost:1234/products/5c593ae2d264e00bcc86965e/update"
