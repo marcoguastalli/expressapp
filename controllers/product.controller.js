@@ -1,11 +1,12 @@
 const Product = require('../models/product.model');
 
-//Simple version, without validation or sanitation
+//welcome to CRUD
 exports.welcome = function (req, res) {
-    res.send('Welcome!');
+    res.send('Welcome to CRUD!');
 };
 
-exports.product_create = function (req, res) {
+//(Create)RUD
+exports.product_create = function (req, res, next) {
     let product = new Product(
         {
             name: req.body.name,
@@ -18,5 +19,15 @@ exports.product_create = function (req, res) {
             return next(err);
         }
         res.send('Product Created successfully')
+    })
+};
+
+//C(Read)UD
+exports.product_details = function (req, res, next) {
+    Product.findById(req.params.id, function (err, product) {
+        if (err) {
+            return next(err);
+        }
+        res.send(product);
     })
 };
