@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/marcoguastalli/expressapp/issues"
   },
-  "homepage": "https://github.com/marcoguastalli/expressapp#readme"
+  "homepage": "https://github.com/marcoguastalli/expressapp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
+  }
 }
