@@ -10,11 +10,12 @@ db.createCollection("expressapp")
 ### run
 mongod --dbpath /Users/marcoguastalli/opt/MongoDB/m27data/db --auth
 mongod --dbpath /Users/marco27/opt/MongoDB/m27data/db --auth
+node app.js
 
+### MongoDB
 mongo -u local -p local 127.0.0.1:27017 --authenticationDatabase admin
 use local
 db.products.find()
-node app.js
 
 ### login
 mongo -u local -p local 127.0.0.1:27017 --authenticationDatabase admin
@@ -28,10 +29,10 @@ curl -X POST --header "Content-Type: application/x-www-form-urlencoded" --header
 
 ##### C(Read)UD
 http://localhost:1234/products/5c59427ed7afd90fd712825a
-curl -X GET --header "Accept: text/html" "http://localhost:1234/products/5c59427ed7afd90fd712825a"
+curl -X GET --header "Accept: text/html" "http://localhost:1234/products/5dd30618876393300438c86b"
 
 ##### CR(Update)D
-curl -X PUT --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: text/html" -d "name=apple&price=27" "http://localhost:1234/products/5c59427ed7afd90fd712825a/update"
+curl -X PUT --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: text/html" -d "name=carrot&price=27" "http://localhost:1234/products/5c90b23cd6f0e513d0fc0029/update"
 
 ##### CRU(Delete)
-curl -X DELETE --header "Accept: text/html" "http://localhost:1234/products/5c593751ca48870acaef910d/delete"
+curl -X DELETE --header "Accept: text/html" "http://localhost:1234/products/5c90b23cd6f0e513d0fc0029/delete"
