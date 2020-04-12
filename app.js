@@ -6,7 +6,11 @@ const app = express();
 
 // Set up mongoose connection
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://local:local@localhost:27017/local?authSource=admin", { useNewUrlParser: true });
+mongoose.connect("mongodb://local:local@localhost:27017/local?authSource=admin", {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+});
 
 mongoose.Promise = global.Promise;
 
