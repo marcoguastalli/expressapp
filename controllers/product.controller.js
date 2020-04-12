@@ -2,7 +2,7 @@ const Product = require('../models/product.model');
 
 //welcome to CRUD
 exports.welcome = function (req, res) {
-    res.send('Welcome to CRUD!');
+    res.send('Welcome to CRUD :)');
 };
 
 //(Create)RUD

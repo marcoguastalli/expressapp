@@ -5,11 +5,11 @@ Express App
 npm init
 npm install --save express body-parser mongoose
 node app.js
+use local
 db.createCollection("expressapp")
 
 ### run
-mongod --dbpath /Users/marcoguastalli/opt/MongoDB/m27data/db --auth
-mongod --dbpath /Users/marco27/opt/MongoDB/m27data/db --auth
+mongod --dbpath $MONGODB_DATA/db --auth
 node app.js
 
 ### MongoDB
