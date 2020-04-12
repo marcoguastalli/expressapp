@@ -36,3 +36,6 @@ curl -X PUT --header "Content-Type: application/x-www-form-urlencoded" --header 
 
 ##### CRU(Delete)
 curl -X DELETE --header "Accept: text/html" "http://localhost:1234/products/5c90b23cd6f0e513d0fc0029/delete"
+
+### cURL
+curl -I HEAD http://localhost:1234/products/faseII/ById?id=5e92cd916c24d3174c25cbd8

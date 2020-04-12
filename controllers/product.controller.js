@@ -51,3 +51,25 @@ exports.product_delete = function (req, res, next) {
         res.send('Product Deleted Successfully');
     })
 };
+
+//Fase II Find ById
+// https://mongoosejs.com/docs/api.html#model_Model.findById
+exports.product_by_id = function (req, res, next) {
+    const id = req.query.id;
+    console.log("Fase II - find By ID: " + id);
+
+    Product.findById(id, function (err, product) {
+        if (err) {
+            return next(err);
+        }
+        console.log("Fase II - found product: " + product.id);
+
+        response = {
+            fase: 'II',
+            id: id,
+            result: product
+        };
+        res.end(JSON.stringify(response));
+    });
+};
+
