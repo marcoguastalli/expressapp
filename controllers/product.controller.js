@@ -69,7 +69,9 @@ exports.product_by_id = function (req, res, next) {
             id: id,
             result: product
         };
-        res.end(JSON.stringify(response));
+        //res.set('Content-Type', 'application/json; charset=utf-8');
+        //res.end(JSON.stringify(response));
+        res.json(response);
     });
 };
 
