@@ -9,7 +9,7 @@ use local
 db.createCollection("expressapp")
 
 ### run
-mongod --dbpath $MONGODB_DATA/db --auth
+mongodb --dbpath $MONGODB_DATA/db --auth
 node app.js
 
 ### MongoDB
