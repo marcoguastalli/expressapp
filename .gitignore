@@ -17,4 +17,3 @@ gradlew.bat
 pom.xml.versionsBackup
 node_modules
 node_modules/*
-package-lock.json
